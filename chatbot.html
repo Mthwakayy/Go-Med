@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Self-Medicate Safely | GoMed AI Assistant</title>
+
+  <meta name="description" content="Use GoMed’s AI assistant to safely self-medicate with WHO-aligned OTC recommendations based on your symptoms.">
+
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="chatbot.css" />
+</head>
+<body>
+  <div style="position:fixed; top:16px; left:16px; z-index:1000;">
+    <a href="index.html" style="background:#0b6ef6; color:#fff; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:600; box-shadow: 0 4px 12px rgba(11,110,246,0.2);">Home</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo" onclick="goToChooseoption()">GoMed 🩺 </div>
+    <div class="cart" >
+      🛒 Cart <span class="cart-count">0</span>
+    </div> 
+    <div class="cart-dropdown" id="cartDropdown" style="display:none;">
+  <ul id="cartList"></ul>
+    </div>
+  </header>
+
+  <!-- Main Chat Area -->
+  <main class="chat-container" id="chatContainer">
+
+    <div class="chat-message bot">
+      Hi 👋 I’m here to help you self-medicate safely.  
+      Please choose a symptom:
+    </div>
+
+    <!-- Symptom Options -->
+    <div class="options" id="symptomOptions">
+  <button class="option-btn" data-symptom="headache">Headache</button>
+  <button class="option-btn" data-symptom="fever">Fever</button>
+  <button class="option-btn" data-symptom="cough">Cough</button>
+  <button class="option-btn" data-symptom="stomach pain">Stomach Pain</button>
+  <button class="option-btn" data-symptom="other">Something else</button>
+</div>
+
+
+    
+  </main>
+
+  <!-- Disclaimer -->
+  <footer class="disclaimer">
+    ⚠ This assistant provides general Over-the-counter guidance only.  
+    It does not diagnose or replace a healthcare professional.
+  </footer>
+<script src="chatbot.js"></script>
+</body>
+</html>
+

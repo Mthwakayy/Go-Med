@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Medication Option</title>
+
+  <meta name="description" content="Use GoMed’s AI assistant to safely self-medicate with WHO-aligned OTC recommendations based on your symptoms.">
+
+  <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="choose-option.css">
+    
+</head>
+<body>
+    <script src="auth.js"></script>
+    <script>
+        // Enforce login when accessing the choose-option page directly
+        enforceLoginOrRedirect('choose-option.html');
+    </script>
+    <div style="position:fixed; top:16px; left:16px; z-index:1000;">
+        <a href="index.html" style="background:#0b6ef6; color:#fff; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:600; box-shadow: 0 4px 12px rgba(11,110,246,0.2);">Home</a>
+    </div>
+
+     <header class="header">
+    <div class="logo" >GoMed 🩺</div>
+    
+  </header>
+
+<div class="container">
+    <h1>Select an option</h1>
+
+    <div class="option-card" onclick="goToSelfMedication()">
+        <h3>🩺 Self-Medicate</h3>
+        <p>Chat with our assistant about your symptoms</p>
+    </div>
+
+    <div class="option-card" onclick="goToPrescription()">
+        <h3>💊 Prescription</h3>
+        <p>Upload a doctor’s prescription</p>
+    </div>
+
+    <div class="option-card" onclick="goToCollection()">
+        <h3>🏥 Collection</h3>
+        <p>Collect medication from a nearby pharmacy</p>
+    </div>
+</div>
+
+<script src="choose-option.js"></script>
+</body>
+</html>
+

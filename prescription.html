@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Prescription</title>
+    <meta name="description" content="Use GoMed’s AI assistant to safely self-medicate with WHO-aligned OTC recommendations based on your symptoms.">
+
+  <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="prescription.css">
+</head>
+<body>
+    <div style="position:fixed; top:16px; left:16px; z-index:1000;">
+        <a href="index.html" style="background:#0b6ef6; color:#fff; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:600; box-shadow: 0 4px 12px rgba(11,110,246,0.2);">Home</a>
+    </div>
+
+<div class="container">
+    <h2>Upload Your Prescription</h2>
+    <p>Please upload a clear photo or PDF of your doctor’s prescription.</p>
+
+    <input type="file" id="prescriptionFile" accept="image/*,.pdf">
+
+    <button onclick="submitPrescription()">Continue</button>
+</div>
+
+<script src="prescription.js"></script>
+</body>
+</html>
+
